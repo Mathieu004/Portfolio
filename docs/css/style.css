@@ -1,9 +1,11 @@
 * {
     margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 html {
-    background: url(../img/sunset.jpg) no-repeat;
+    background: url(../img/background.jpg) no-repeat fixed;
     background-size: 100vw 100vh;
 }
 
@@ -15,5 +17,58 @@ html {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.35);
     z-index: 1;
+}
+
+/*---------------------------------------------------------- HEADER -------------------------------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
   }
+
+.portfolio {
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+  
+header nav {
+    display: flex;
+    justify-content: center;
+}
+  
+header nav ul {
+    display: flex;
+}
+  
+header nav ul li {
+    margin: 0 25px;
+}
+  
+header nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+header nav ul li a:hover {
+    color: #ed3c57;
+}
+
+  /*---------------------------------------------------------- Profil -------------------------------------------------------------*/
+
+  
+  
+
 
