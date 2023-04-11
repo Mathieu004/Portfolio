@@ -1,12 +1,22 @@
 * {
     margin: 0;
-    text-decoration: none;
+    padding:0;
     list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
 }
 
 html {
     background: url(../img/background.jpg) no-repeat fixed;
     background-size: 100vw 100vh;
+    scroll-behavior: smooth;
 }
 
 .overlay {
@@ -16,12 +26,13 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.35);
-    z-index: 1;
+    z-index: -1;
 }
 
 /*---------------------------------------------------------- HEADER -------------------------------------------------------------*/
 
 header {
+    height: 12%;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,14 +42,21 @@ header {
     width: 100%;
     box-sizing: border-box;
     z-index: 9999;
+    background: url(../img/background.jpg);
+    background-size: 100vw 100vh;
+    background-position: center top;
+    background-attachment: fixed;
+    overflow: hidden;
   }
 
 .portfolio {
-    font-family: 'Poppins';
     text-transform: uppercase;
-    color: white;
     font-size: 2em;
     font-weight: bold;
+}
+
+.portfolio:hover {
+    opacity: 70%;
 }
   
 header nav {
@@ -57,18 +75,110 @@ header nav ul li {
 header nav ul li a {
     display: block;
     padding: 10px 15px;
-    color: white;
-    font-family: 'Poppins';
     font-weight: 500;
 }
 
 header nav ul li a:hover {
-    color: #ed3c57;
+    color: #ffa8af;
 }
 
-  /*---------------------------------------------------------- Profil -------------------------------------------------------------*/
+/*---------------------------------------------------------- PROFIL -------------------------------------------------------------*/
 
+.profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 25vh auto;
+}
   
+.profil h1 {
+    font-size: 3rem;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
   
+.profil p {
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+  
+.profil img {
+    width: 400px;
+    max-height: 100%;
+    margin-left: 20px;
+}
+  
+/*---------------------------------------------------------- COMPETENCES -------------------------------------------------------------*/
 
+.container{
+    margin-top: 300px;
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
 
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color:#fff;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding:30px 20px;
+}
+
+.container .box-container .box img{
+    height: 80px;
+}
+
+.container .box-container .box h3{
+    color:#444;
+    font-size: 22px;
+    padding:10px 0;
+}
+
+.container .box-container .box p{
+    color:#777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.container .box-container .box .btn{
+    margin-top: 10px;
+    display: inline-block;
+    background:#333;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .container{
+        padding:20px;
+    }
+}
