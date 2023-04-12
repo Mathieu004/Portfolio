@@ -11,7 +11,12 @@ window.onload = function() {
         document.removeEventListener('wheel', preventDefault);
         body.style.overflow = '';
         overlay.classList.add('hidden');
-      }, 3000); 
+        
+        setTimeout(function() {
+            overlay.style.zIndex = '-30';
+        }, 1000);
+    }, 3000);
+    
 };
 
 function preventDefault(e) {
