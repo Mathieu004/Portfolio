@@ -34,21 +34,14 @@ const box2 = document.querySelector('.box-swaping2');
 slidesG.addEventListener("click", function() {
     box1.classList.add('animation1D');
     box2.classList.add('animation2D');
-    setTimeout(function() {
-        box1.classList.remove('animation1D');
-        box2.classList.remove('animation2D');
-    }, 1000);
+    box2.classList.remove('animation2G');
+    box1.classList.remove('animation1G');
 })
 
 slidesD.addEventListener("click", function() {
     box2.classList.remove('none');
     box2.classList.add('animation2G');
     box1.classList.add('animation1G');
-    setTimeout(function() {
-        box2.classList.remove('animation2G');
-        box1.classList.remove('animation1G');
-    }, 1000);
+    box1.classList.remove('animation1D');
+    box2.classList.remove('animation2D');
 })
-
-
-
