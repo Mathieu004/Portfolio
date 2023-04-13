@@ -12,6 +12,7 @@
 }
 
 html {
+    overflow-x: hidden;
     background: url(../img/background.jpg) no-repeat fixed;
     background-size: 100vw 100vh;
     scroll-behavior: smooth;
@@ -20,6 +21,10 @@ html {
 .hidden {
     opacity: 0;
     transition: opacity 1s ease-in-out;
+}
+
+.none {
+    display: none;
 }
 
 /*---------------------------------------------------------- OVERLAY -------------------------------------------------------------*/
@@ -199,14 +204,14 @@ header nav ul li a:hover {
 /*---------------------------------------------------------- COMPETENCES -------------------------------------------------------------*/
 
 .container {
+    width: 100%;
     margin-top: 300px;
     padding: 15px 9%;
-    padding-bottom: 100px;
 }
 
 .container h1 {
     text-align: start;
-    padding-top: 80px;
+    padding-top: 90px;
     padding-bottom: 35px;
     color:#fff;
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
@@ -215,8 +220,8 @@ header nav ul li a:hover {
 
 .container .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap:15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
 }
 
 .container .box-container .box {
@@ -224,7 +229,7 @@ header nav ul li a:hover {
     border-radius: 5px;
     background: #fff;
     text-align: center;
-    padding:30px 20px;
+    padding: 30px 20px;
 }
 
 .container .box-container .box img {
@@ -234,7 +239,7 @@ header nav ul li a:hover {
 .container .box-container .box h3 {
     color:#444;
     font-size: 22px;
-    padding:10px 0;
+    padding: 10px 0;
 }
 
 .container .box-container .box p {
@@ -261,6 +266,111 @@ header nav ul li a:hover {
     box-shadow: 0 10px 15px rgba(0,0,0,.3);
     transform: scale(1.03);
 }
+
+
+.box-slide {
+    position: relative;
+}
+
+.box-in {
+    width: 100%;
+    height: 100%;
+}
+
+.fleche {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    top: 300px;
+    filter: invert(1);
+}
+
+.g {
+    opacity: 0.4;
+    left: -150px;
+    transition: all 0.3s ease;
+}
+
+.d {
+    opacity: 0.4;
+    right: -150px;
+    transition: all 0.3s ease;
+}
+
+.g:hover,
+.d:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.g:active,
+.d:active {
+    opacity: 1;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.box-swaping2 {
+    width: 100%;
+    position: absolute;
+}
+
+.animation1G {
+    animation: animate-slide1-G 1s ease forwards;
+}
+
+.animation2G {
+    animation: animate-slide2-G 1s ease forwards;
+}
+
+.animation1D {
+    animation: animate-slide1-D 1s ease forwards;
+}
+
+.animation2D {
+    animation: animate-slide2-D 1s ease forwards;
+}
+
+@keyframes animate-slide1-G {
+    0% {
+        
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes animate-slide2-G {
+    0% {
+        transform: translateY(-100%) translateX(150%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animate-slide1-D {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animate-slide2-D {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-100%) translateX(150%);
+    }
+}
+
+
+
 
 @media (max-width:768px){
     .container{
