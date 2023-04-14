@@ -12,7 +12,6 @@
 }
 
 html {
-    
     background: url(../img/background.jpg) no-repeat fixed;
     background-size: 100vw 100vh;
     scroll-behavior: smooth;
