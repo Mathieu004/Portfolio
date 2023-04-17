@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .hidden {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -365,12 +370,5 @@ header nav ul li a:hover {
     }
     100% {
         transform: translateY(-100%) translateX(150%);
-    }
-}
-
-
-@media (max-width:768px){
-    .container{
-        padding:20px;
     }
 }
