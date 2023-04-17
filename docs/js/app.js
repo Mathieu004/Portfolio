@@ -35,9 +35,7 @@ slidesG.addEventListener("click", function() {
     box1.classList.add('animation1D');
     box2.classList.add('animation2D');
     box2.classList.remove('animation2G');
-    box1.classList.remove('animation1G');
-
-    
+    box1.classList.remove('animation1G');  
 })
 
 slidesD.addEventListener("click", function() {
