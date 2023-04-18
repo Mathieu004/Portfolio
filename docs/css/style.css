@@ -77,7 +77,6 @@ body {
 }
 
 .second {
-    font-weight: 00px;
     z-index: 9999;
     display: inline-block;
     animation: secondspan 1.5s forwards cubic-bezier(0.785,0.135,0.15,0.86);

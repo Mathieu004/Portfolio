@@ -11,10 +11,11 @@
 @media (max-width:1600px) {
     .container .scale-img img {
         height: 60px !important;
+        margin-bottom: 20px;
     }
 
     .scale-title h3 {
-        font-size: 17px !important;
+        font-size: 13px !important;
     }
 }
 
@@ -29,12 +30,16 @@
         display: none;
     }
 
+    .fleche {
+        top:250px;
+    }
+
     .g {
-        left: -125px;
+        left: -120px;
     }
     
     .d {
-        right: -125px;
+        right: -120px;
     }
 
     .container .box-container {
@@ -51,16 +56,41 @@
         margin: 25vh 80px;
     }
 
-    .container .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-
-    .fleche {
-        top: 500px;
+    .container .box-in img {
+        height: 60px !important;
+        margin-bottom: 0;
     }
 }
 
 @media (max-width:1250px) {
+    .profil h1 {
+        font-size: 3rem;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+
+    .profil p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .profil img {
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .container .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .container .box-container .box {
+        padding: 15px 10px;
+    }
+
+    .fleche {
+        top: 200px;
+    }
+
     .g {
         left: -100px;
     }
@@ -70,9 +100,49 @@
     }
 }
 
+@media (max-width:1008px) {
+    .profil h1 {
+        font-size: 2.7rem;
+    }
 
-@media (max-width:768px){
+    .profil p {
+        font-size: 0.8rem;
+    }
+
+    .profil img {
+        width: 250px;
+    }
+
+    .container h1 {
+        padding-top: 90px;
+        padding-bottom: 15px;
+        font-size: 40px;
+    }
+
+    .container .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .container .scale-img img {
+        height: 80px !important;
+        margin-bottom: 0;
+    }
+
+    .fleche {
+        top: 500px;
+    }
+}
+
+@media (max-width:871px) {
     .container{
         padding:20px;
+    }
+}
+
+
+@media (max-width:768px) {
+    .g,
+    .d {
+        display: none;
     }
 }
