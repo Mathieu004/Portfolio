@@ -106,6 +106,14 @@
 }
 
 @media (max-width:1080px) {
+    header {
+        justify-content: center;
+    }
+
+    .portfolio {
+        display: none;
+    }
+
     .profil h1 {
         font-size: 2.7rem;
     }
@@ -139,6 +147,19 @@
 }
 
 @media (max-width:871px) {
+    .profil h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .profil p {
+        font-size: 0.6rem;
+    }
+
+    .profil img {
+        width: 200px;
+    }
+
     .container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -167,17 +188,81 @@
 
 
 @media (max-width:768px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav ul li a {
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+
+    .profil h1 {
+        font-size: 1.8rem;
+    }
+
+    .profil p {
+        font-size: 0.4rem;
+    }
+
+    .profil img {
+        width: 150px;
+    }
+    
+    .container h1 {
+        padding-top: 60px;
+        margin-bottom: 50px;
+        font-size: 25px;
+    }
+
+    .container h2 {
+        font-size: 15px;
+    }
+
     .container .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    }
+
+    .container h3 {
+        font-size: 9px !important;
+    }
+
+    .scale-title h3 {
+        font-size: 7px !important;
+        margin-bottom: 2px;
+    }
+
+    .container .scale-img img {
+        height: 30px !important;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .container .box-container .box img {
+        height: 40px;
+    }
+
+    .container .box-container .box .btn {
+        margin-top: 7px;
+        font-size: 9px;
+        border-radius: 5px;
+        padding: 4px 12px;
+    }
+
+    .fleche {
+        top: -100px;
+        width: 30px;
+        height: 30px;
     }
 
     .g {
-        left: 35px;
+        left: -30px;
     }
 
     .d {
-        right: 35px;
+        right: -30px;
     }
+    
 }
 
 @media (max-width:675px) {
@@ -226,10 +311,6 @@
         font-size: 25px;
     }
 
-    .container h2 {
-        font-size: 15px;
-    }
-
     .container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     }
@@ -257,7 +338,7 @@
     }
 
     .fleche {
-        top: -70px;
+        top: -60px;
     }
 
     .g {
