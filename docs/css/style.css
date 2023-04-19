@@ -12,9 +12,9 @@
 }
 
 html {
-    background: url(../img/background.jpg) no-repeat !important;
-    background-size: 100vw 100vh !important;
-    background-attachment: fixed !important;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
     background-position: top;
     scroll-behavior: smooth;
 }
