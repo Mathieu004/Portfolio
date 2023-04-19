@@ -279,6 +279,7 @@
         background-image: url(../img/background-phone.jpg);
         background-size: 100vw 100vh;
         background-attachment: fixed;
+        background-repeat: no-repeat;
     }
 
     header {
