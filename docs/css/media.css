@@ -276,8 +276,7 @@
 
 @media (max-width:570px) {
     html {
-        background-image: url('../img/background-phone.jpg');
-        background-repeat: no-repeat;
+        background-image: url(../img/background-phone.jpg);
         background-size: cover;
         background-attachment: fixed;
     }
