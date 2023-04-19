@@ -16,7 +16,7 @@
 
     .scale-title h3 {
         font-size: 15px !important;
-        margin-bottom: 7px;
+        margin-bottom: 1px;
     }
 }
 
@@ -233,9 +233,7 @@
     }
 
     .container .scale-img img {
-        height: 30px !important;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        height: 40px !important;
     }
 
     .container .box-container .box img {
@@ -244,7 +242,7 @@
 
     .container .box-container .box .btn {
         margin-top: 7px;
-        font-size: 9px;
+        font-size: 10px;
         border-radius: 5px;
         padding: 4px 12px;
     }
@@ -266,11 +264,6 @@
 }
 
 @media (max-width:675px) {
-    .container .scale-img img {
-        height: 40px !important;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
 
     .g {
         left: 10px;
@@ -326,16 +319,11 @@
 
     .container .scale-img img {
         height: 30px !important;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 
-    .container .box-container .box .btn {
-        margin-top: 7px;
-        font-size: 12px;
-        border-radius: 5px;
-        padding: 4px 12px;
-    }
+    
 
     .fleche {
         top: -60px;
