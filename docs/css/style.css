@@ -136,7 +136,7 @@ header {
     box-sizing: border-box;
     z-index: 9999;
     background: url(../img/background.jpg);
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-position: center top;
     background-attachment: fixed;
     overflow: hidden;

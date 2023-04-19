@@ -264,6 +264,9 @@
 }
 
 @media (max-width:675px) {
+    header nav ul li a {
+        padding: 10px 5px;
+    }
 
     .g {
         left: 10px;
@@ -275,19 +278,10 @@
 }
 
 @media (max-width:570px) {
-    html {
-        background-image: url(../img/background-phone.jpg);
-        background-size: 100vw 100vh;
-        background-attachment: fixed;
-    }
-
+    
     header {
-        background: url(../img/background-phone.jpg);
-        background-size: cover;
-        background-position: center top;
-        background-attachment: fixed;
-        overflow: hidden;
-      }
+        display: none;
+    }
     
     .container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
