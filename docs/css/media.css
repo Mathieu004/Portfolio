@@ -161,6 +161,7 @@
 @media (max-width:871px) {
     .animation-presentation span {
         font-size: 2.7rem;
+        margin-bottom: 50px;
     }
 
     .profil h1 {
