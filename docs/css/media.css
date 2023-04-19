@@ -53,6 +53,10 @@
 }
 
 @media (max-width: 1300px) {
+    .animation-presentation span {
+        font-size: 4rem;
+    }
+
     .profil {
         margin: 25vh 80px;
     }
@@ -72,6 +76,10 @@
 }
 
 @media (max-width: 1250px) {
+    .animation-presentation span {
+        font-size: 3.5rem;
+    }
+
     .profil h1 {
         font-size: 3rem;
         margin-right: 10px;
@@ -106,6 +114,10 @@
 }
 
 @media (max-width:1080px) {
+    .animation-presentation span {
+        font-size: 3rem;
+    }
+
     header {
         justify-content: center;
     }
@@ -147,6 +159,10 @@
 }
 
 @media (max-width:871px) {
+    .animation-presentation span {
+        font-size: 2.7rem;
+    }
+
     .profil h1 {
         font-size: 2.2rem;
         margin-bottom: 10px;
@@ -188,6 +204,10 @@
 
 
 @media (max-width:768px) {
+    .animation-presentation span {
+        font-size: 2rem;
+    }
+
     header {
         padding: 20px;
     }
@@ -264,6 +284,10 @@
 }
 
 @media (max-width:675px) {
+    .animation-presentation span {
+        font-size: 1.5rem;
+    }
+
     header nav ul li a {
         padding: 10px 5px;
     }
@@ -306,6 +330,10 @@
 }
 
 @media (max-width:470px) {
+    .animation-presentation span {
+        font-size: 1.25rem;
+    }
+
     .container h1 {
         padding-top: 120px;
         margin-bottom: 10px;
