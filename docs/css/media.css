@@ -303,9 +303,12 @@
 }
 
 @media (max-width:570px) {
-    
-    header {
+    /*header {
         display: none;
+    }*/
+
+    header nav ul li a {
+        padding: 10px 0px;
     }
     
     .container .box-container {
@@ -331,6 +334,10 @@
 }
 
 @media (max-width:470px) {
+    header nav ul li {
+        margin: 0 15px;
+    }
+
     .animation-presentation span {
         font-size: 1.25rem;
     }
