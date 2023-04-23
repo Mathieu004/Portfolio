@@ -378,6 +378,10 @@
         width: 100px;
     }
 
+    .profil p {
+        font-size: 5px;
+      }
+
     .container h1 {
         padding-top: 120px;
         margin-bottom: 10px;
