@@ -328,11 +328,11 @@
     }
 
     .profil h1 {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .profil p {
-        font-size: 0.3em;
+        font-size: 0.3rem;
     }
 
     .profil img {
@@ -372,20 +372,6 @@
 
     .animation-presentation span {
         font-size: 1.25rem;
-    }
-
-    .profil {
-        gap: 30px;
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-
-    .profil h1 {
-        font-size: 1em;
-    }
-
-    .profil p {
-        font-size: 0.1em !important;
     }
 
     .profil img {
