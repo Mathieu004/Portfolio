@@ -57,3 +57,42 @@ flecheDroite.addEventListener("click", function() {
         numeroSlide = 2;
     }
 })
+
+let lastClickedBox = null;
+
+const boxes = document.querySelectorAll('.box');
+
+boxes.forEach(box => {
+  box.addEventListener('click', function(event) {
+    const images = event.currentTarget.querySelectorAll('img');
+    const h1 = event.currentTarget.querySelector('h1');
+    
+    if (lastClickedBox !== null && lastClickedBox !== event.currentTarget) {
+      // Inverse l'état de la dernière box cliquée
+      const lastImages = lastClickedBox.querySelectorAll('img');
+      lastImages.forEach(img => {
+        img.classList.remove('none');
+      });
+      lastClickedBox.classList.remove('backCard');
+    }
+
+    if (lastClickedBox !== null && lastClickedBox === event.currentTarget) {
+        // Inverse l'état de la dernière box cliquée
+        const lastImages = lastClickedBox.querySelectorAll('img');
+        lastImages.forEach(img => {
+          img.classList.remove('none');
+        });
+        lastClickedBox.classList.remove('backCard');
+        lastClickedBox.classList.add('frontCard');
+      }
+    
+    images.forEach(img => {
+      img.classList.add('none');
+    });
+    
+    event.currentTarget.classList.toggle('backCard');
+    
+    // Enregistre la dernière box cliquée
+    lastClickedBox = event.currentTarget;
+  });
+});

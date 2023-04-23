@@ -426,9 +426,3 @@
         right: -30px;
     }
 }
-
-@media (max-width:336px) {
-    .profil p {
-        font-size: 0.1rem;
-      }
-}

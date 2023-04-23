@@ -402,3 +402,29 @@ header nav ul li a:hover {
         transform: translateY(-100%) translateX(150%);
     }
 }
+
+.backCard {
+    animation: rotateBack 2s forwards;
+}
+
+.frontCard {
+    animation: rotateFront 2s forwards;
+}
+
+@keyframes rotateBack {
+    0% {
+
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes rotateFront {
+    0% {
+
+    }
+    100% {
+        transform: rotateY(-180deg);
+    }
+}
