@@ -285,6 +285,10 @@
 }
 
 @media (max-width:675px) {
+    .headdiv {
+        height: 12vh;
+    }
+    
     .profil {
         flex-direction: column;
         margin: 15vh 50px;
@@ -368,7 +372,7 @@
     .animation-presentation span {
         font-size: 1.25rem;
     }
-    
+
     /*.profil img {
         width: 100px;
     }
