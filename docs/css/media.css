@@ -81,13 +81,13 @@
     }
 
     .profil h1 {
-        font-size: 3em;
+        font-size: 3rem;
         margin-right: 10px;
         margin-bottom: 30px;
     }
 
     .profil p {
-        font-size: 1em;
+        font-size: 1rem;
         margin-bottom: 10px;
     }
 
@@ -127,11 +127,11 @@
     }
 
     .profil h1 {
-        font-size: 2.7em;
+        font-size: 2.7rem;
     }
 
     .profil p {
-        font-size: 0.8em;
+        font-size: 0.8rem;
     }
 
     .profil img {
@@ -165,12 +165,12 @@
     }
 
     .profil h1 {
-        font-size: 2.2em;
+        font-size: 2.2rem;
         margin-bottom: 10px;
     }
 
     .profil p {
-        font-size: 0.6em;
+        font-size: 0.6rem;
     }
 
     .profil img {
@@ -206,7 +206,7 @@
 
 @media (max-width:768px) {
     .animation-presentation span {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     header {
@@ -219,11 +219,11 @@
     }
 
     .profil h1 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 
     .profil p {
-        font-size: 0.4em;
+        font-size: 0.4rem;
     }
 
     .profil img {
@@ -286,7 +286,7 @@
 
 @media (max-width:675px) {
     .profil h1 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     .profil img {
@@ -417,5 +417,7 @@
 }
 
 @media (max-width:336px) {
-
+    .profil p {
+        font-size: 0.1rem;
+      }
 }
