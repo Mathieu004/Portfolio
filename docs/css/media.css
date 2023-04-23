@@ -374,6 +374,24 @@
         font-size: 1.25rem;
     }
 
+    .profil {
+        gap: 30px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .profil h1 {
+        font-size: 1em;
+    }
+
+    .profil p {
+        font-size: 0.3em;
+    }
+
+    .profil img {
+        width: 100px;
+    }
+
     .container h1 {
         padding-top: 120px;
         margin-bottom: 10px;
