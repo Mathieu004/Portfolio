@@ -385,7 +385,7 @@
     }
 
     .profil p {
-        font-size: 0.1em;
+        font-size: 0.1em !important;
     }
 
     .profil img {
