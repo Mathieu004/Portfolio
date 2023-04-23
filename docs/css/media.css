@@ -285,12 +285,21 @@
 }
 
 @media (max-width:675px) {
+    .profil {
+        flex-direction: column;
+        margin: 15vh 50px;
+    }
+
     .profil h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .profil img {
-        width: 120px;
+        width: 200px;
+    }
+
+    .profil p {
+        font-size: 0.7rem;
     }
 
     .container h1 {
@@ -323,20 +332,6 @@
 
     .profil {
         gap: 30px;
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-
-    .profil h1 {
-        font-size: 1rem;
-    }
-
-    .profil p {
-        font-size: 0.3rem;
-    }
-
-    .profil img {
-        width: 100px;
     }
 
     header nav ul li a {
@@ -373,14 +368,14 @@
     .animation-presentation span {
         font-size: 1.25rem;
     }
-
-    .profil img {
+    
+    /*.profil img {
         width: 100px;
     }
 
     .profil p {
         font-size: 5px;
-      }
+    }*/
 
     .container h1 {
         padding-top: 120px;
