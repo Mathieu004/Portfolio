@@ -151,7 +151,7 @@ header {
 }
 
 .headdiv {
-    height: 18vh;
+    height: 12vh;
     width: 100%;
     overflow: hidden;
     position: fixed;
@@ -351,23 +351,17 @@ header nav ul li a:hover {
     position: absolute;
 }
 
-.animation1G {
-    animation: animate-slide1-G 1s ease forwards;
+.box-swaping3 {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 5px;
 }
 
-.animation2G {
-    animation: animate-slide2-G 1s ease forwards;
-}
-
-.animation1D {
-    animation: animate-slide1-D 1s ease forwards;
-}
-
-.animation2D {
-    animation: animate-slide2-D 1s ease forwards;
-}
-
-@keyframes animate-slide1-G {
+/* animation slide 1 prend la place de slide 0 */
+.animation1-0 {animation: animate-slide1-0 1s ease forwards;}
+@keyframes animate-slide1-0 {
     0% {
         
     }
@@ -376,16 +370,8 @@ header nav ul li a:hover {
     }
 }
 
-@keyframes animate-slide2-G {
-    0% {
-        transform: translateY(-100%) translateX(150%);
-    }
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
-@keyframes animate-slide1-D {
+.animation1-1 {animation: animate-slide1-1 1s ease forwards;}
+@keyframes animate-slide1-1 {
     0% {
         transform: translateX(-150%);
     }
@@ -394,7 +380,60 @@ header nav ul li a:hover {
     }
 }
 
-@keyframes animate-slide2-D {
+.animation2-0 {animation: animate-slide2-0 1s ease forwards;}
+@keyframes animate-slide2-0 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(-150%) translateY(-100%);
+    }
+}
+
+/* animation slide 2 prend la place de slide 1 quand on click sur la fleche droite */
+.animation2-1D {animation: animate-slide2-1D 1s ease forwards;}
+@keyframes animate-slide2-1D {
+    0% {
+        transform: translateY(-100%) translateX(150%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* animation slide 2 prend la place de slide 1 quand on click sur la fleche droite */
+.animation2-1G {animation: animate-slide2-1G 1s ease forwards;}
+@keyframes animate-slide2-1G {
+    0% {
+        transform: translateX(-150%) translateY(-100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.animation2-2 {animation: animate-slide2-2 1s ease forwards;}
+@keyframes animate-slide2-2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-100%) translateX(150%);
+    }
+}
+
+.animation3-1 {animation: animate-slide3-1 1s ease forwards;}
+@keyframes animate-slide3-1 {
+    0% {
+        transform: translateY(-100%) translateX(150%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.animation3-3 {animation: animate-slide3-2 1s ease forwards;}
+@keyframes animate-slide3-2 {
     0% {
         transform: translateY(-100%);
     }
