@@ -99,29 +99,43 @@ boxes.forEach(box => {
 
     // Reclick sur la meme box
     if (lastClickedBox !== null && lastClickedBox === event.currentTarget) {
-      const lastImages = lastClickedBox.querySelectorAll('img');
-      
       lastClickedBox.classList.remove('backCard');
       lastClickedBox.classList.add('frontCard');
 
+      images.forEach(img => {
+        img.classList.remove('op');
+        img.classList.add('op2');
+      });
+      h3.classList.remove('op');
+      h3.classList.add('op2');
+
+      p.classList.remove('op2');
+      p.classList.add('op');
+
+      a.classList.remove('op');
+      a.classList.add('op2');
+      
+      setTimeout(() => {
+        p.classList.add('none');
+        setTimeout(() => {
+          images.forEach(img => {
+            img.classList.remove('none');
+          });
+          h3.classList.remove('none');
+          a.classList.remove('none');
+        }, 200);
+      }, 375);
+
       setTimeout(() => {
         images.forEach(img => {
-          img.classList.remove('op');
-          img.classList.add('op2');
-          img.classList.remove('none')
+          img.classList.remove('op2');
         });
-
-        h3.classList.add('op2');
-        a.classList.add('op2');
-        p.classList.add('op');
-        p.classList.add('none');
-        h3.classList.remove('none');
-        a.classList.remove('none');
-      }, 375);
-      setTimeout(() => {
+        h3.classList.remove('op2');
+        a.classList.remove('op2');
         lastClickedBox.classList.remove('frontCard');
       }, 2000);
       lastClickedBox = null;
+      return;
     }
     
     // Click sur une autre box apres avoir deja clické sur une box
@@ -143,14 +157,22 @@ boxes.forEach(box => {
 
         lastH3.classList.add('op2');
         lastA.classList.add('op2');
-        lastP.classList.add('op');
+        lastH3.classList.add('op');
         lastP.classList.add('none');
-        lastH3.classList.remove('none');
+        h3.classList.remove('none');
         lastA.classList.remove('none');
       }, 375);
       setTimeout(() => {
         lastClickedBox.classList.remove('frontCard');
       }, 2000);
+      lastClickedBox = null;
+      return;
+
+      
+      /*setTimeout(() => {
+        lastClickedBox.classList.remove('frontCard');
+      }, 2000);
+
       // Inverse la box clické
       images.forEach(img => {
         img.classList.add('op');
@@ -167,7 +189,7 @@ boxes.forEach(box => {
         });
       }, 375);
       event.currentTarget.classList.add('backCard');
-      lastClickedBox = event.currentTarget;
+      lastClickedBox = event.currentTarget;*/
     }
 
     // Retournement de box
@@ -177,6 +199,7 @@ boxes.forEach(box => {
       });
       h3.classList.add('op');
       a.classList.add('op');
+      p.classList.remove('op');
       p.classList.add('op2');
       setTimeout(() => {
         p.classList.remove('none');
@@ -189,6 +212,7 @@ boxes.forEach(box => {
       event.currentTarget.classList.add('backCard');
       // Enregistre la dernière box cliquée
       lastClickedBox = event.currentTarget;
+      return;
     }  
   });
 });

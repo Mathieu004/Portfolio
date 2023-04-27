@@ -453,15 +453,16 @@ header nav ul li a:hover {
 }
 @keyframes rotateFront {
     0% {
-        transform: rotateY(360deg);
+
     }
     50% {
-        transform: rotateY(260deg);
+        transform: rotateY(270deg);
     }
     100% {
-        transform: rotateY(0deg);
+        transform: rotateY(360deg);
     }
 }
+
 
 .backCard {
     animation: rotateBack 1s forwards;
@@ -480,10 +481,10 @@ header nav ul li a:hover {
 
 .op {animation: op 1s forwards;}
 @keyframes op {
-    49% {
+    29% {
         opacity: 100%;
     }
-    50% {
+    30% {
         opacity: 0; /* Ajout de l'étape intermédiaire */
     }
     100% {
