@@ -3,6 +3,7 @@
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('body');
 
+//Remonte le site en haut lors du reload de page et affiche l'overlay
 window.onload = function() {
     overlay.classList.remove('hidden');
     body.style.overflow = 'hidden';
@@ -20,6 +21,7 @@ window.onload = function() {
     }, 3000); 
 };
 
+// Pour supprimer la barre de defilement verticale durant l'animation overlay
 function preventDefault(e) {
     e.preventDefault();
 }
@@ -33,6 +35,7 @@ const box1 = document.querySelector('.box-swaping1');
 const box2 = document.querySelector('.box-swaping2');
 const box3 = document.querySelector('.box-swaping3');
 
+// slide 1 = slide visible
 let numeroSlide = 1;
 
 flecheGauche.addEventListener("click", function() {
@@ -90,34 +93,102 @@ const boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
   box.addEventListener('click', function(event) {
     const images = event.currentTarget.querySelectorAll('img');
-    const h1 = event.currentTarget.querySelector('h1');
-    
-    if (lastClickedBox !== null && lastClickedBox !== event.currentTarget) {
-      // Inverse l'état de la dernière box cliquée
+    const h3 = event.currentTarget.querySelector('h3');
+    const p = event.currentTarget.querySelector('p');
+    const a = event.currentTarget.querySelector('a');
+
+    // Reclick sur la meme box
+    if (lastClickedBox !== null && lastClickedBox === event.currentTarget) {
       const lastImages = lastClickedBox.querySelectorAll('img');
-      lastImages.forEach(img => {
-        img.classList.remove('none');
-      });
+      
       lastClickedBox.classList.remove('backCard');
+      lastClickedBox.classList.add('frontCard');
+
+      setTimeout(() => {
+        images.forEach(img => {
+          img.classList.remove('op');
+          img.classList.add('op2');
+          img.classList.remove('none')
+        });
+
+        h3.classList.add('op2');
+        a.classList.add('op2');
+        p.classList.add('op');
+        p.classList.add('none');
+        h3.classList.remove('none');
+        a.classList.remove('none');
+      }, 375);
+      setTimeout(() => {
+        lastClickedBox.classList.remove('frontCard');
+      }, 2000);
+      lastClickedBox = null;
+    }
+    
+    // Click sur une autre box apres avoir deja clické sur une box
+    if (lastClickedBox !== null && lastClickedBox !== event.currentTarget) {
+      const lastH3 = lastClickedBox.querySelector('h3');
+      const lastA = lastClickedBox.querySelector('a');
+      const lastP = lastClickedBox.querySelectorAll('p');
+      const lastImages = lastClickedBox.querySelectorAll('img');
+      
+      lastClickedBox.classList.remove('backCard');
+      lastClickedBox.classList.add('frontCard');
+
+      setTimeout(() => {
+        lastImages.forEach(img => {
+          img.classList.remove('op');
+          img.classList.add('op2');
+          img.classList.remove('none')
+        });
+
+        lastH3.classList.add('op2');
+        lastA.classList.add('op2');
+        lastP.classList.add('op');
+        lastP.classList.add('none');
+        lastH3.classList.remove('none');
+        lastA.classList.remove('none');
+      }, 375);
+      setTimeout(() => {
+        lastClickedBox.classList.remove('frontCard');
+      }, 2000);
+      // Inverse la box clické
+      images.forEach(img => {
+        img.classList.add('op');
+      });
+      h3.classList.add('op');
+      a.classList.add('op');
+      p.classList.add('op2');
+      setTimeout(() => {
+        p.classList.remove('none');
+        h3.classList.add('none');
+        a.classList.add('none');
+        images.forEach(img => {
+          img.classList.add('none')
+        });
+      }, 375);
+      event.currentTarget.classList.add('backCard');
+      lastClickedBox = event.currentTarget;
     }
 
-    if (lastClickedBox !== null && lastClickedBox === event.currentTarget) {
-        // Inverse l'état de la dernière box cliquée
-        const lastImages = lastClickedBox.querySelectorAll('img');
-        lastImages.forEach(img => {
-          img.classList.remove('none');
+    // Retournement de box
+    else {
+      images.forEach(img => {
+        img.classList.add('op');
+      });
+      h3.classList.add('op');
+      a.classList.add('op');
+      p.classList.add('op2');
+      setTimeout(() => {
+        p.classList.remove('none');
+        h3.classList.add('none');
+        a.classList.add('none');
+        images.forEach(img => {
+          img.classList.add('none')
         });
-        lastClickedBox.classList.remove('backCard');
-        lastClickedBox.classList.add('frontCard');
-      }
-    
-    images.forEach(img => {
-      img.classList.add('none');
-    });
-    
-    event.currentTarget.classList.toggle('backCard');
-    
-    // Enregistre la dernière box cliquée
-    lastClickedBox = event.currentTarget;
+      }, 375);
+      event.currentTarget.classList.add('backCard');
+      // Enregistre la dernière box cliquée
+      lastClickedBox = event.currentTarget;
+    }  
   });
 });

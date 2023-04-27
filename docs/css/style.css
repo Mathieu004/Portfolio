@@ -37,7 +37,7 @@ body {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
 
 /*---------------------------------------------------------- OVERLAY -------------------------------------------------------------*/
@@ -280,6 +280,7 @@ header nav ul li a:hover {
     color:#777;
     font-size: 15px;
     line-height: 1.8;
+    padding: 20% 0;
 }
 
 .container .box-container .box .btn {
@@ -358,6 +359,8 @@ header nav ul li a:hover {
     position: absolute;
     border-radius: 5px;
 }
+
+/*---------------------------------------------------------- ANIMATIONS SLIDES COMPETENCES -------------------------------------------------------------*/
 
 /* animation slide 1 prend la place de slide 0 */
 .animation1-0 {animation: animate-slide1-0 1s ease forwards;}
@@ -442,28 +445,61 @@ header nav ul li a:hover {
     }
 }
 
-.backCard {
-    animation: rotateBack 2s forwards;
-}
+/*---------------------------------------------------------- ANIMATIONS CARD REVEAL COMPETENCES -------------------------------------------------------------*/
 
 .frontCard {
-    animation: rotateFront 2s forwards;
+    animation: rotateFront 1s forwards;
+    transform-style: preserve-3d;
 }
-
-@keyframes rotateBack {
-    0% {
-
-    }
-    100% {
-        transform: rotateY(180deg);
-    }
-}
-
 @keyframes rotateFront {
     0% {
-
+        transform: rotateY(360deg);
+    }
+    50% {
+        transform: rotateY(260deg);
     }
     100% {
-        transform: rotateY(-180deg);
+        transform: rotateY(0deg);
+    }
+}
+
+.backCard {
+    animation: rotateBack 1s forwards;
+    transform-style: preserve-3d;
+}
+@keyframes rotateBack {
+    0% {
+    }
+    50% {
+      transform: rotateY(270deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.op {animation: op 1s forwards;}
+@keyframes op {
+    49% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0; /* Ajout de l'étape intermédiaire */
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.op2 {animation: op2 1s forwards;}
+@keyframes op2 {
+    29% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 100%; /* Ajout de l'étape intermédiaire */
+    }
+    100% {
+        opacity: 100%;
     }
 }
