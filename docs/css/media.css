@@ -58,7 +58,11 @@
 
 @media (max-width: 1300px) {
     .back {
-        height: 120vh;
+        position: relative;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -99;
     }
     .animation-presentation span {
         font-size: 4rem;
