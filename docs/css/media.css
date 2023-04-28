@@ -167,6 +167,10 @@
         margin-bottom: 0;
     }
 
+    .container .box p {
+        padding: 60px 0 0 0 !important;
+    }
+
     .fleche {
         top: 385px;
     }
@@ -273,6 +277,11 @@
 
     .container .box-container .box img {
         height: 40px;
+    }
+
+    .container .box p {
+        padding: 40px 0 0 0 !important;
+        font-size: 9px !important;
     }
 
     .container .box-container .box .btn {
@@ -411,6 +420,10 @@
 
     .container h3 {
         font-size: 9px !important;
+    }
+
+    .container .box p {
+        padding: 20px 0 0 0 !important;
     }
 
     .scale-title h3 {
