@@ -183,30 +183,8 @@ boxes.forEach(box => {
         lastClickedBox.classList.remove('frontCard');
       }, 2000);
       lastClickedBox = null;
+      box.click();
       return;
-
-      
-      /*setTimeout(() => {
-        lastClickedBox.classList.remove('frontCard');
-      }, 2000);
-
-      // Inverse la box clické
-      images.forEach(img => {
-        img.classList.add('op');
-      });
-      h3.classList.add('op');
-      a.classList.add('op');
-      p.classList.add('op2');
-      setTimeout(() => {
-        p.classList.remove('none');
-        h3.classList.add('none');
-        a.classList.add('none');
-        images.forEach(img => {
-          img.classList.add('none')
-        });
-      }, 375);
-      event.currentTarget.classList.add('backCard');
-      lastClickedBox = event.currentTarget;*/
     }
 
     // Retournement de box
