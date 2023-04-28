@@ -31,9 +31,6 @@
 }
 
 @media (max-width:1475px) {
-    .container p{
-        display: none;
-    }
 
     .fleche {
         top: 200px;
