@@ -72,7 +72,7 @@
     .container {
         padding-top: 100px;
         padding-bottom: 100px;
-        background-color: black;
+        background: url(../img/background.jpg)
     }
 
     .container .box-container {
