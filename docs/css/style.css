@@ -453,7 +453,7 @@ header nav ul li a:hover {
 }
 @keyframes rotateFront {
     0% {
-
+        transform: rotateY(360deg);
     }
     50% {
         transform: rotateY(270deg);
@@ -481,10 +481,10 @@ header nav ul li a:hover {
 
 .op {animation: op 1s forwards;}
 @keyframes op {
-    29% {
+    49% {
         opacity: 100%;
     }
-    30% {
+    50% {
         opacity: 0; /* Ajout de l'étape intermédiaire */
     }
     100% {

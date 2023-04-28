@@ -99,6 +99,7 @@ boxes.forEach(box => {
 
     // Reclick sur la meme box
     if (lastClickedBox !== null && lastClickedBox === event.currentTarget) {
+      console.log('Reclick sur la meme box');
       lastClickedBox.classList.remove('backCard');
       lastClickedBox.classList.add('frontCard');
 
@@ -140,29 +141,45 @@ boxes.forEach(box => {
     
     // Click sur une autre box apres avoir deja clické sur une box
     if (lastClickedBox !== null && lastClickedBox !== event.currentTarget) {
+      console.log('Click sur une autre box apres avoir deja clické sur une box');
       const lastH3 = lastClickedBox.querySelector('h3');
       const lastA = lastClickedBox.querySelector('a');
-      const lastP = lastClickedBox.querySelectorAll('p');
+      const lastP = lastClickedBox.querySelector('p');
       const lastImages = lastClickedBox.querySelectorAll('img');
       
       lastClickedBox.classList.remove('backCard');
       lastClickedBox.classList.add('frontCard');
 
+      lastImages.forEach(img => {
+        img.classList.remove('op');
+        img.classList.add('op2');
+      });
+      lastH3.classList.remove('op');
+      lastH3.classList.add('op2');
+
+      lastP.classList.remove('op2');
+      lastP.classList.add('op');
+
+      lastA.classList.remove('op');
+      lastA.classList.add('op2');
+      
+      setTimeout(() => {
+        lastP.classList.add('none');
+        setTimeout(() => {
+          lastImages.forEach(img => {
+            img.classList.remove('none');
+          });
+          lastH3.classList.remove('none');
+          lastA.classList.remove('none');
+        }, 200);
+      }, 375);
+
       setTimeout(() => {
         lastImages.forEach(img => {
-          img.classList.remove('op');
-          img.classList.add('op2');
-          img.classList.remove('none')
+          img.classList.remove('op2');
         });
-
-        lastH3.classList.add('op2');
-        lastA.classList.add('op2');
-        lastH3.classList.add('op');
-        lastP.classList.add('none');
-        h3.classList.remove('none');
-        lastA.classList.remove('none');
-      }, 375);
-      setTimeout(() => {
+        lastH3.classList.remove('op2');
+        lastA.classList.remove('op2');
         lastClickedBox.classList.remove('frontCard');
       }, 2000);
       lastClickedBox = null;
@@ -194,6 +211,7 @@ boxes.forEach(box => {
 
     // Retournement de box
     else {
+      console.log('Retournement de box');
       images.forEach(img => {
         img.classList.add('op');
       });
