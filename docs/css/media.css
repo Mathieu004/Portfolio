@@ -65,9 +65,12 @@
         font-size: 4rem;
     }
 
+    .home nav ul li a {
+        font-size: 13px;
+    }
 
     .container .box-container {
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     }
 
     .container .box-container .box img {
@@ -117,12 +120,9 @@
         font-size: 3rem;
     }
 
-    header {
-        justify-content: center;
-    }
-
-    .portfolio {
-        display: none;
+    .home nav ul li a {
+        font-size: 11px;
+        padding-top: 3vh;
     }
 
     .profil h1 {
@@ -158,6 +158,12 @@
 
     .fleche {
         top: 385px;
+    }
+}
+
+@media (max-width:1000px) {
+    .home nav ul li {
+        margin: 0 0px;
     }
 }
 
