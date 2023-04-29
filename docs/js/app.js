@@ -4,7 +4,7 @@ const overlay = document.querySelector('.overlay');
 const body = document.querySelector('body');
 
 //Remonte le site en haut lors du reload de page et affiche l'overlay
-window.onload = function() {
+window.addEventListener('load', function() {
     overlay.classList.remove('hidden');
     body.style.overflow = 'hidden';
     window.scrollBy(0, -1 * window.pageYOffset);
@@ -19,7 +19,7 @@ window.onload = function() {
             overlay.style.zIndex = '-30';
         }, 1000);
     }, 3000); 
-};
+});
 
 // Pour supprimer la barre de defilement verticale durant l'animation overlay
 function preventDefault(e) {
