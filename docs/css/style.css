@@ -432,7 +432,6 @@ body {
 
 .frontCard {
     animation: rotateFront 1s forwards;
-    transform-style: preserve-3d;
 }
 @keyframes rotateFront {
     0% {
@@ -449,7 +448,6 @@ body {
 
 .backCard {
     animation: rotateBack 1s forwards;
-    transform-style: preserve-3d;
 }
 @keyframes rotateBack {
     0% {
