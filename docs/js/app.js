@@ -37,6 +37,8 @@ const box3 = document.querySelector('.box-swaping3');
 
 // slide 1 = slide visible
 let numeroSlide = 1;
+flecheDroite.click();
+flecheGauche.click();
 
 flecheGauche.addEventListener("click", function() {
     if(numeroSlide === 2) {
