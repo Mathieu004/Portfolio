@@ -2,12 +2,13 @@
 
 const overlay = document.querySelector('.overlay');
 const body = document.querySelector('body');
+const profil = document.querySelector('#profil');
 
 //Remonte le site en haut lors du reload de page et affiche l'overlay
 window.addEventListener('load', function() {
     overlay.classList.remove('hidden');
     body.style.overflow = 'hidden';
-    window.scrollBy(0, -1 * window.pageYOffset);
+    profil.click();
 
     document.addEventListener('wheel', preventDefault, { passive: false });
     setTimeout(function() {
