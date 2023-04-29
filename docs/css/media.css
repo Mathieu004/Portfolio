@@ -25,12 +25,19 @@
 }
 
 @media (max-width:1518px) {
+    .home nav ul li {
+        margin: 0 10px;
+    }
+
     .container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
 @media (max-width:1475px) {
+    .home nav ul li {
+        margin: 0 5px;
+    }
 
     .fleche {
         top: 200px;
@@ -54,27 +61,10 @@
 }
 
 @media (max-width: 1300px) {
-    .back {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -99;
-    }
     .animation-presentation span {
         font-size: 4rem;
     }
 
-    .profil {
-        margin: 25vh 80px;
-    }
-
-    .container {
-        padding-top: 100px;
-        padding-bottom: 100px;
-        background: url(../img/background.jpg) no-repeat;
-        background-size: 100% 100vh;
-    }
 
     .container .box-container {
             grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -97,18 +87,12 @@
 
     .profil h1 {
         font-size: 3rem;
-        margin-right: 10px;
         margin-bottom: 30px;
     }
 
     .profil p {
         font-size: 1rem;
         margin-bottom: 10px;
-    }
-
-    .profil img {
-        width: 300px;
-        margin-left: 10px;
     }
 
     .container .box-container .box {

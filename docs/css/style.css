@@ -12,18 +12,7 @@
 }
 
 html {
-    /*background: url(../img/background.jpg) no-repeat;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;*/
     scroll-behavior: smooth;
-}
-
-.back {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -99;
 }
 
 body {
@@ -48,7 +37,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +49,7 @@ body {
     font-size: 5rem;
     text-align: center;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
@@ -130,50 +119,38 @@ body {
     }
 }
 
-/*---------------------------------------------------------- HEADER -------------------------------------------------------------*/
+/*---------------------------------------------------------- HOME -------------------------------------------------------------*/
 
-header {
-    height: 12%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    padding: 50px;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 9999;
-    /*background: url(../img/background.jpg);
-    background-size: 100vw 100vh;
-    background-position: center top;
-    background-attachment: fixed;*/
-    overflow: hidden;
-}
-
-.headdiv {
-    height: 12vh;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9998;
-    background-image: url('../img/background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-position: center top;
-}
-
-.headBack {
-    position: fixed;
-    top: 0;
-    left: 0;
+.home {
+    height: 100vh;
     width: 100vw;
-    height: 120vh;
-    z-index: 9998;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.home .descriptionProfil {
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .imageProfil {
+    z-index: 2;
+    width: 40%;
+    height: 100vh;
+    background: url("../img/profil.jpg") no-repeat;
+    background-size: cover;
 }
 
 .portfolio {
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
     text-transform: uppercase;
     font-size: 2em;
     font-weight: bold;
@@ -183,42 +160,46 @@ header {
     opacity: 70%;
 }
   
-header nav {
+.home nav {
     display: flex;
     justify-content: center;
 }
   
-header nav ul {
+.home nav ul {
     display: flex;
 }
   
-header nav ul li {
-    margin: 0 25px;
+.home nav ul li {
+    margin: 0 15px;
 }
   
-header nav ul li a {
+.home nav ul li a {
     display: block;
-    padding: 10px 15px;
+    padding-top: 3vh;
+    padding-right: 10px;
+    padding-left: 10px;
     font-weight: 500;
+    color:white;
 }
 
-header nav ul li a:hover {
-    color: #ffa8af;
+.home nav ul li a:hover {
+    color: black;
 }
-
-/*---------------------------------------------------------- PROFIL -------------------------------------------------------------*/
 
 .profil {
     display: flex;
-    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 5%;
+    background-color: black;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    max-width: 1200px;
-    margin: 25vh 17vw;
+    overflow: hidden;
 }
   
 .profil h1 {
+    display: flex;
+    justify-content: end;
     font-size: 3.2rem;
     margin-bottom: 40px;
 }
@@ -230,17 +211,20 @@ header nav ul li a:hover {
 }
   
 .profil img {
-    width: 320px;
-    max-height: 100%;
-    margin-left: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
 }
   
 /*---------------------------------------------------------- COMPETENCES -------------------------------------------------------------*/
 
 .container {
     width: 100%;
-    margin-top: 20vh;
+    /*margin-top: 20vh;*/
     padding: 15px 9%;
+    background: url(../img/background.jpg) no-repeat;
+    background-size: 100vw 100%;
 }
 
 .container h1 {
