@@ -27,6 +27,32 @@ function preventDefault(e) {
     e.preventDefault();
 }
 
+/*---------------------------------------------------------- MENU DEROULANT -------------------------------------------------------------*/
+
+const menuDeroulant = document.querySelector('.menu-deroulant');
+const boutonMenu = document.querySelector('.btn-menu');
+const lienMenu = document.querySelectorAll('.lien-menu');
+let visibilityMenu = 0;
+
+boutonMenu.addEventListener("click", function() {
+  menuDeroulant.classList.toggle('none');
+  if(visibilityMenu === 0) {
+    body.style.overflow = 'hidden';
+    visibilityMenu = 1;
+  }
+  else {
+    body.style.overflow = 'auto';
+    visibilityMenu = 0;
+  }
+});
+
+lienMenu.forEach(function(element) {
+  element.addEventListener("click", function() {
+    console.log('err');
+    boutonMenu.click();
+  });
+});
+
 /*---------------------------------------------------------- SLIDE COMPETENCES -------------------------------------------------------------*/
 
 const flecheDroite = document.querySelector('.d');
