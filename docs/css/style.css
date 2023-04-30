@@ -126,7 +126,6 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     overflow: hidden;    
 }
 
@@ -140,7 +139,7 @@ body {
 }
 
 .home .imageProfil {
-    z-index: 2;
+    /*z-index: 2;*/
     width: 40%;
     height: 100vh;
     background: url("../img/profil.jpg") no-repeat;
