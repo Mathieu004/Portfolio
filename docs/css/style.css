@@ -159,6 +159,14 @@ body {
 .portfolio:hover {
     opacity: 70%;
 }
+
+.btn-menu {
+    width: 40px;
+    position: absolute;
+    top: 3vh;
+    right: 4vw;
+    display: none;
+}
   
 .home nav {
     display: flex;
@@ -223,7 +231,6 @@ body {
     padding: 15px 9%;
     background: white;
     background-size: 100vw 100%;
-    height: 100vh;
 }
 
 
