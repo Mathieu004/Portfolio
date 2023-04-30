@@ -190,10 +190,6 @@
         margin-bottom: 10px;
     }
 
-    .profil p {
-        font-size: 0.6rem;
-    }
-
     .profil img {
         width: 200px;
     }
@@ -244,7 +240,7 @@
     }
 
     .profil p {
-        font-size: 0.4rem;
+        font-size: 0.6rem;
     }
 
     .profil img {
@@ -375,7 +371,6 @@
     .home .descriptionProfil {
         width: 100%;
         height: 100%;
-        padding-bottom: 40vh solid black;
         display: flex;
         background-color: rgba(0, 0, 0, 0.386);
         justify-content: center;
@@ -390,7 +385,8 @@
         width: 100vw;
         height: 100vh;
         background: url("../img/profil.jpg") no-repeat;
-        background-size: 100vw 60vh;
+        background-position: center;
+        background-size: cover;
     }
 
     .portfolio {
@@ -428,21 +424,13 @@
 }
 
 @media (max-width:470px) {
-    header nav ul li {
-        margin: 0 15px;
-    }
-
     .animation-presentation span {
         font-size: 1.25rem;
     }
 
-    /*.profil img {
-        width: 100px;
+    .home .descriptionProfil {
+        padding-top: 10vh;
     }
-
-    .profil p {
-        font-size: 5px;
-    }*/
 
     .container h1 {
         padding-top: 120px;
