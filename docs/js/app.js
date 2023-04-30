@@ -41,7 +41,7 @@ boutonMenu.addEventListener("click", function() {
     visibilityMenu = 1;
   }
   else {
-    body.style.overflow = 'auto';
+    body.style.overflow = 'auto'; 
     visibilityMenu = 0;
   }
 });
