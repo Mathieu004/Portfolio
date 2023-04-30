@@ -91,6 +91,7 @@ let lastClickedBox = null;
 
 const boxes = document.querySelectorAll('.box');
 
+if (window.innerWidth > 700) {
 boxes.forEach(box => {
   box.addEventListener('click', function(event) {
     const images = event.currentTarget.querySelectorAll('img');
@@ -213,3 +214,4 @@ boxes.forEach(box => {
     }  
   });
 });
+}
