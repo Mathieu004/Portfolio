@@ -38,12 +38,16 @@ boutonMenu.addEventListener("click", function() {
   menuDeroulant.classList.toggle('none');
   if(visibilityMenu === 0) {
     body.style.overflow = 'hidden';
-    boutonMenu.setAttribute('src', 'docs/img/menu-croix.png');
+    boutonMenu.setAttribute('src', 'docs/img/croix.png');
+    boutonMenu.style.filter = 'invert(1)';
+    boutonMenu.style.width = '30px';
     visibilityMenu = 1;
   }
   else {
     body.style.overflow = 'auto';
     boutonMenu.setAttribute('src', 'docs/img/menu-btn.png');
+    boutonMenu.style.filter = 'none';
+    boutonMenu.style.width = '40px';
     visibilityMenu = 0;
   }
 });

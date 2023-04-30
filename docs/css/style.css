@@ -121,6 +121,14 @@ body {
 
 /*---------------------------------------------------------- HOME -------------------------------------------------------------*/
 
+.btn-menu {
+    width: 40px;
+    position: absolute;
+    top: 3vh;
+    right: 4vw;
+    display: none;
+}
+
 .menu-deroulant {
     position: absolute;
     top: 0;
@@ -182,14 +190,6 @@ body {
     opacity: 70%;
 }
 
-.btn-menu {
-    width: 40px;
-    position: absolute;
-    top: 3vh;
-    right: 4vw;
-    display: none;
-}
-  
 .home nav {
     display: flex;
     justify-content: center;
