@@ -397,12 +397,32 @@
         gap: 30px;
     }
 
-    header nav ul li a {
-        padding: 10px 0px;
+    .container {
+        background: rgb(0, 0, 0);
+    }
+
+    .container h1 {
+        color:#fff;
+    }
+
+    .box-swapping3 {
+        background-color: #fff;
+    }
+
+    .fleche {
+        filter: invert(1);
     }
     
     .container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .container h2 {
+        color: #fff;
+    }
+
+    .container .box-container .box {
+        background: white;
     }
 
     .scale-title h3 {

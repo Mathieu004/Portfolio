@@ -32,9 +32,9 @@ function preventDefault(e) {
 const flecheDroite = document.querySelector('.d');
 const flecheGauche = document.querySelector('.g');
 
-const box1 = document.querySelector('.box-swaping1');
-const box2 = document.querySelector('.box-swaping2');
-const box3 = document.querySelector('.box-swaping3');
+const box1 = document.querySelector('.box-swapping1');
+const box2 = document.querySelector('.box-swapping2');
+const box3 = document.querySelector('.box-swapping3');
 
 // slide 1 = slide visible
 let numeroSlide = 1;
