@@ -6,10 +6,6 @@
     .container .box-container .box p {
         font-size: 12px;
     }
-
-    .fleche {
-        top: 230px;
-    }
 }
 
 @media (max-width: 1605px) {
